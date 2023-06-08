@@ -4,9 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = (_, argv) => ({
   output: {
-    // publicPath: "http://localhost:3001/",
-    publicPath: "https://detailsmfe.netlify.app/",
-
+    publicPath: "http://localhost:3001/",
   },
 
   resolve: {
@@ -45,7 +43,7 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "details",
       filename: "remoteEntry.js",
-      remotes: {home: 'home@https://homemfe.netlify.app/remoteEntry.js'
+      remotes: {home: 'home@http://localhost:3000/remoteEntry.js'
     },
       exposes: {
               },
