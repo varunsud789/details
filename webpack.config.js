@@ -43,7 +43,7 @@ module.exports = (_, argv) => ({
     new ModuleFederationPlugin({
       name: "details",
       filename: "remoteEntry.js",
-      remotes: {home: 'home@http://localhost:3000/remoteEntry.js'
+      remotes: {home: 'home@https://homemfe.netlify.app/remoteEntry.js'
     },
       exposes: {
               },
